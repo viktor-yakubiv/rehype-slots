@@ -17,6 +17,7 @@ const input = `
   <div>
     <slot name="author">Anonymous</slot>
   </div>
+  <slot></slot>
 </article>
 `;
 
@@ -25,7 +26,10 @@ const values = {
   title: "A Tale Of Two Cities",
 
   // a HAST tree that will be inserted
-  quote: h("p", "It was the best of times...")
+  quote: h("p", "It was the best of times..."),
+
+  // a default slot
+  [""]: h("p", "Rest of content"),
 };
 
 const expected = `
@@ -35,6 +39,7 @@ const expected = `
     <p>It was the best of times...</p>
   </div>
   <div>Anonymous</div>
+  <p>Rest of content</p>
 </article>
 `;
 
@@ -47,6 +52,7 @@ const expected2 = `
   <div>
     <slot name="author">Anonymous</slot>
   </div>
+  <p>Rest of content</p>
 </article>
 `;
 

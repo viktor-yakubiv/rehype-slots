@@ -23,7 +23,7 @@ function wrapNodeArray(input) {
 function hastUtilSlots(tree, values = {}, unwrap = true) {
   return unistUtilFlatMap(tree, node => {
     if (node.type === "element" && node.tagName === "slot") {
-      const name = node.properties.name;
+      const name = node.properties.name ?? "" ;
       const replacementNodes = values[name];
       if (replacementNodes) {
         return wrapNodeArray(replacementNodes);
