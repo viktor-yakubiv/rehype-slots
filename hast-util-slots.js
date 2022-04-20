@@ -1,4 +1,4 @@
-const unistUtilFlatMap = require("unist-util-flatmap");
+import unistUtilFlatMap from "unist-util-flatmap";
 
 /**
  * Wrap into a node list.
@@ -38,4 +38,4 @@ function hastUtilSlots(tree, values = {}, unwrap = true) {
   });
 }
 
-module.exports = hastUtilSlots;
+export default hastUtilSlots;

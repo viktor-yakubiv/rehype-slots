@@ -1,4 +1,4 @@
-const hastUtilSlots = require("./hast-util-slots");
+import hastUtilSlots from "./hast-util-slots.js";
 
 function rehypeSlots({ values = {}, unwrap }) {
   return function(tree) {
@@ -12,4 +12,4 @@ function rehypeWrap({ layout, slotName = "body" }) {
   };
 }
 
-module.exports = rehypeSlots;
+export default rehypeSlots;

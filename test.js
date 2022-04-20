@@ -1,10 +1,10 @@
-const assert = require("assert");
-const unified = require("unified");
-const rehypeParse = require("rehype-parse");
-const rehypeSlots = require(".");
-const rehypeFormat = require("rehype-format");
-const rehypeStringify = require("rehype-stringify");
-const h = require("hastscript");
+import assert from "assert";
+import unified from "unified";
+import rehypeParse from "rehype-parse";
+import rehypeSlots from "./index.js";
+import rehypeFormat from "rehype-format";
+import rehypeStringify from "rehype-stringify";
+import h from "hastscript";
 
 const input = `
 <h1>
